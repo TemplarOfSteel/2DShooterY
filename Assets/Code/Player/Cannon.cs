@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
-
     public GameObject projectilePrefab;
     public float speed = 3f;
 
     public float timeBetweenShoots = 1f;
     float timeLeft = 0f;
 
-
-
     private void Update()
     {
-        if(timeLeft<=0f)
+        if(timeLeft <= 0f)
         {
             if(Input.GetKey(KeyCode.Space))
-                {
+            {
                 SpawnProjectile();
                 timeLeft += timeBetweenShoots;
             }

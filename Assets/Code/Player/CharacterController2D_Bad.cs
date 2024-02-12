@@ -59,7 +59,9 @@ public class CharacterController2D : MonoBehaviour
 
         if(dir!= Vector2.zero)
         {
-            if(Vector2.Dot( _rb.velocity, dir )<_speed)
+            var exessivespeed = Vector2.Dot(_rb.velocity, dir) - _speed;
+            
+            if (exessivespeed<0)
             {
                 _rb.AddForce(_acceleration * dir * Time.fixedDeltaTime);
             }

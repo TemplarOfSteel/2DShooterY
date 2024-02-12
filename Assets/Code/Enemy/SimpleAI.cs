@@ -5,6 +5,7 @@ using UnityEngine;
 public class SimpleAI : MonoBehaviour
 {
     public float speed = 5f;
+    public float searchDistance = 25f;
     Transform _transform;
     Transform _otherTransform;
 
@@ -18,6 +19,9 @@ public class SimpleAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _transform.position += (_otherTransform.position - _transform.position).normalized * speed * Time.deltaTime;
+        if((transform.position - _otherTransform.position).sqrMagnitude <= Mathf.Pow(searchDistance, 2))
+        {
+            _transform.position += (_otherTransform.position - _transform.position).normalized * speed * Time.deltaTime;
+        }
     }
 }

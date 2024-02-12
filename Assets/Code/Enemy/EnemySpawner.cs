@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 
 
     public float spawnTimer = 1f;
-    float timeToNextSpawn =0f;
+    float timeToNextSpawn = 0f;
 
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update(){if (timeToNextSpawn <= 0) { SpawnEnemy(); timeToNextSpawn += spawnTimer; } timeToNextSpawn -= Time.deltaTime;}
+    void Update(){ if (timeToNextSpawn <= 0) { SpawnEnemy(); timeToNextSpawn += spawnTimer; } timeToNextSpawn -= Time.deltaTime;}
 
     void SpawnEnemy()
     {
