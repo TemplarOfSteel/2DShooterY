@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 6624839295849477694}
   - component: {fileID: 7343343165039103779}
   - component: {fileID: 8473992329665641067}
-  - component: {fileID: 5479773989100213277}
   - component: {fileID: 5604203216049226576}
+  - component: {fileID: 5831635476580113669}
   m_Layer: 6
-  m_Name: Character
+  m_Name: Character 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,21 +161,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5479773989100213277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266049969603300784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8916f7b5d7080e94c8eb86d8373810ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 10
-  _acceleration: 4000
-  _deacceleration: 5000
 --- !u!114 &5604203216049226576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +173,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b82d217883046d41ac1a5616ef69478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5831635476580113669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266049969603300784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97a374248ee52e4aa221f189cb54bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 15
+  _acceleration: 5000
+  _deacceleration: 5000
 --- !u!1 &2521133392946217704
 GameObject:
   m_ObjectHideFlags: 0

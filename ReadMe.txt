@@ -39,3 +39,30 @@ LookAtMouse används för att sikta
 Cannon spawnar attacken
 DestroyByTimer förstör attacker som missar fiender
 DamageOnHit skadar fiender som träffas samt förstör attacken efter träff
+
+
+=== 2 ===
+
+
+--- LevelGen
+LevelGenerator : MonoBehaviour - håller referenser och kallar på LevelGen
+StaticLevelGenerator - all faktiskt LevelGen
+LevelTile - script för LevelTilePrefab, genererar objekt på individuell tile
+
+
+--- LevelTile
+Empty GameObject med LevelTile script
+4 child objects: sprite. Har Additional settings/Order in Layer -1 för att hamna bakom spelaren
+
+Setup() istället för constructor
+
+Ett antal metoder för att generera väggar
+
+
+--- LevelGenerator
+GenerateLevel() generar tiles tills det finns tillräckligt många (tilesToGenerate)
+
+
+--- UI
+Visar FPS
+Högerklicka i hierkin: UI/Text - TextMeshPro för att skapa nytt UI-objekt
