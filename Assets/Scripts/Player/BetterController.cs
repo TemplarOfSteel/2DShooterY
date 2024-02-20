@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BetterController : MonoBehaviour //For thrid class/day
+public class BetterController : MonoBehaviour //For third class/day
 {
     Rigidbody2D _rb;
     Transform _transform;

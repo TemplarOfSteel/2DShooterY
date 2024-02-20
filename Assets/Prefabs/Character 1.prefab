@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8473992329665641067}
   - component: {fileID: 5604203216049226576}
   - component: {fileID: 5831635476580113669}
+  - component: {fileID: 3852078317355049681}
   m_Layer: 6
   m_Name: Character 1
   m_TagString: Player
@@ -114,7 +115,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &8473992329665641067
 BoxCollider2D:
@@ -185,9 +186,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97a374248ee52e4aa221f189cb54bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 15
-  _acceleration: 5000
-  _deacceleration: 5000
+  _maxSpeed: 17.9
+  _acceleration: 323
+  _deaccelerationFactor: 0.1
+  _boostTime: 0.513
+  _boostMultiplier: 2.8
+  _boostCooldown: 9.89
+--- !u!114 &3852078317355049681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266049969603300784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ee1bdea4be4fb47928efa279a8e359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthbar: {fileID: 0}
+  _health: 100
 --- !u!1 &2521133392946217704
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,5 +304,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8037786624292662948, guid: c4f418759d60143439e1786badd2dd70, type: 3}
+  explosiveProjectilePrefab: {fileID: 5723289589461262050, guid: a8b3fd281057eb04c97ccf76a7e87bf0, type: 3}
   speed: 30
-  timeBetweenShoots: 1
+  timeBetweenShoots: 0.1

@@ -8,11 +8,15 @@ public class DamageOnHit : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        foreach( var damagable in collision.gameObject.GetComponents<IDamagable>())
+        var damagables = collision.gameObject.GetComponents<IDamagable>();
+        foreach (var damagable in damagables)
         {
             damagable.TakeDamage(damage);
         }
 
-        Destroy(gameObject);
+        if(damagables.Length != 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
