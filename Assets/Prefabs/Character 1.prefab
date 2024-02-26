@@ -186,6 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97a374248ee52e4aa221f189cb54bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyBossPrefab: {fileID: 5494566619166947890, guid: ccec22d4e1892dd49b43654005a0e384, type: 3}
+  text: {fileID: 0}
   _maxSpeed: 17.9
   _acceleration: 323
   _deaccelerationFactor: 0.1

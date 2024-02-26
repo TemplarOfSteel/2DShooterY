@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour, IDamagable
 {
@@ -20,5 +21,11 @@ public class Health : MonoBehaviour, IDamagable
     {
         _currentHealth -= damage;
         _healthbar.SetFill(_currentHealth / _health);
+
+        if(_currentHealth <= 0)
+        {
+            Application.Quit();
+            SceneManager.LoadScene(0);
+        }
     }
 }

@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BetterController : MonoBehaviour //For third class/day
 {
     Rigidbody2D _rb;
     Transform _transform;
+
+    public GameObject enemyBossPrefab;
+
+    public TextMeshProUGUI text;
 
     [SerializeField]
     [Range(0f, 50f)]
@@ -33,12 +38,18 @@ public class BetterController : MonoBehaviour //For third class/day
     float _boostCooldown = 2f;
     float _cooldownLeft = 0;
 
+    private int points = 0;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Hello world");
         _transform = gameObject.transform;
         _rb = _transform.GetComponent<Rigidbody2D>();
+        text.text = points.ToString();
     }
 
     // Update is called once per frame
@@ -82,6 +93,18 @@ public class BetterController : MonoBehaviour //For third class/day
             }
 
             _rb.velocity = vel;
+        }
+    }
+
+    public void AddPoints(int value)
+    {
+        points += value;
+        text.text = points.ToString();
+
+        if(points % 250 == 0 && value != 0)
+        {
+            var enemyHealth = GameObject.Instantiate(enemyBossPrefab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<DestroyByDamage>();
+            enemyHealth.hp = points / 2 + 50;
         }
     }
 }

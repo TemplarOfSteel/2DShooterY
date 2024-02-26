@@ -22,7 +22,7 @@ public class ShootProjectilesOnHit : MonoBehaviour
             var rotVector = (Quaternion.Euler(0, 0, rot) * new Vector3(1, 0, 0));
 
             var projectile = Instantiate(projectilePrefab, this.transform.position, Quaternion.identity);
-            projectile.GetComponent<Rigidbody2D>().velocity = speed * rotVector; //EMILE
+            projectile.GetComponent<Rigidbody2D>().velocity = speed * rotVector;
         }
     }
 }
